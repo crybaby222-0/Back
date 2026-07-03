@@ -1,0 +1,19 @@
+
+services:
+  - type: web
+    name: joe-music-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_USER
+        value: joe
+      - key: ADMIN_PASS
+        value: joecreator668820@f
+      - key: DATABASE_URL
+        sync: false
